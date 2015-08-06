@@ -8,7 +8,17 @@
 				<div class="panel-heading">Home</div>
 
 				<div class="panel-body">
-					You are logged in!
+                    {!! Form::open(['url' => 'locations', 'data-toggle' => 'validator']) !!}
+                    <div class="form-group">
+                            {!! Form::label('KM Reading') !!}
+                            {!! Form::text('km',null,[ 'class' => 'form-control']) !!}</div>
+                        <br /><br />
+                        <div class="form-group">
+                            {!! Form::submit('Get Location',null,[ 'class' => 'btn btn-primary form-control']) !!}
+                        </div>
+
+                    {!! Form::close() !!}
+
 				</div>
 			</div>
 		</div>
